@@ -1,0 +1,6 @@
+LIBRARY   rawhid
+EXPORTS
+   rawhid_open   @1
+   rawhid_recv   @2
+   rawhid_send   @3
+   rawhid_close  @4

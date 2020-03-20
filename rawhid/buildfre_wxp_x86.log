@@ -1,0 +1,70 @@
+BUILD: Computing Include file dependencies:
+BUILD: Examining d:\xtkbk\pjrc\usb_raw_hid\rawhid_lib directory for files to compile.
+Compiling (NoSync) d:\xtkbk\pjrc\usb_raw_hid\rawhid_lib directory ********************
+1>'nmake.exe /nologo BUILDMSG=Stop. -i NTTEST= UMTEST= NOLINK=1 NOPASS0=1 PASS1_NOLIB=1 386=1'
+1>BUILDMSG: Processing d:\xtkbk\pjrc\usb_raw_hid\rawhid_lib
+1>cl -nologo -Ii386\ -I. -IC:\WINDDK\3790~1.183\inc\mfc42 -IC:\WINDDK\3790~1.183\inc\ddk\wdm\wxp -Iobjfre_wxp_x86\i386 -IC:\WINDDK\3790~1.183\inc\wxp -IC:\WINDDK\3790~1.183\inc\wxp -IC:\WINDDK\3790~1.183\inc\crt -D_X86_=1 -Di386=1  -DSTD_CALL -DCONDITION_HANDLING=1   -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0501 /DWINVER=0x0501 -D_WIN32_IE=0x0603    -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -D__BUILDMACHINE__=WinDDK -DFPO=0  -DNDEBUG -D_DLL=1 -D_MT=1      /c /Zl /Zp8 /Gy /Gm-  /W3 /WX /WX /Gz  /GX-  /GR- /GF /GS /G6 /Ze /Gi- /QIfdiv- /hotpatch -Z7 /Oxs  /Oy-   -FIC:\WINDDK\3790~1.183\inc\wxp\warning.h   .\hid_windows.c 
+1>hid_windows.c
+1>
+1>Stop.
+Compiling  d:\xtkbk\pjrc\usb_raw_hid\rawhid_lib directory ********************
+100>'nmake.exe /nologo BUILDMSG=Stop. -i NTTEST= UMTEST= NOLINK=1 NOPASS0=1 386=1'
+100>BUILDMSG: Processing d:\xtkbk\pjrc\usb_raw_hid\rawhid_lib
+100>	lib -out:objfre_wxp_x86\i386\rawhid.lib @C:\DOCUME~1\Jon\LOCALS~1\Temp\nm6C.tmp
+100>Microsoft (R) Library Manager Version 7.10.4035
+100>Copyright (C) Microsoft Corporation.  All rights reserved.
+100>
+100>-IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221 
+100>/WX 
+100>-nodefaultlib 
+100>-machine:ix86 
+100>-def:rawhid.def 
+100>objfre_wxp_x86\i386\hid_windows.obj 
+100>   Creating library objfre_wxp_x86\i386\rawhid.lib and object objfre_wxp_x86\i386\rawhid.exp
+100>
+100>Stop.
+Linking d:\xtkbk\pjrc\usb_raw_hid\rawhid_lib directory ********************
+1>'nmake.exe /nologo BUILDMSG=Stop. -i LINKONLY=1 NOPASS0=1 NTTEST= UMTEST= MAKEDLL=1 386=1'
+1>BUILDMSG: Processing d:\xtkbk\pjrc\usb_raw_hid\rawhid_lib
+1>	link -out:objfre_wxp_x86\i386\rawhid.dll -machine:ix86 @C:\DOCUME~1\Jon\LOCALS~1\Temp\nm6D.tmp
+1>Microsoft (R) Incremental Linker Version 7.10.4035
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>
+1>-MERGE:_PAGE=PAGE 
+1>-MERGE:_TEXT=.text 
+1>-SECTION:INIT,d 
+1>-OPT:REF 
+1>-OPT:ICF 
+1>-IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221 
+1>-INCREMENTAL:NO 
+1>-FULLBUILD 
+1>/release 
+1>-NODEFAULTLIB 
+1>/WX 
+1>-debug 
+1>-debugtype:cv 
+1>-version:5.1 
+1>-osversion:5.1 
+1>/functionpadmin:5 
+1>/safeseh 
+1>/opt:nowin98 
+1>-merge:.rdata=.text 
+1>/pdbcompress 
+1>-STACK:0x40000,0x1000 
+1>-dll 
+1>-base:@C:\WINDDK\3790~1.183\bin\coffbase.txt,rawhid 
+1>-subsystem:console,4.10 
+1>-entry:_DllMainCRTStartup@12 
+1>objfre_wxp_x86\i386\rawhid.exp 
+1>objfre_wxp_x86\i386\hid_windows.obj 
+1>C:\WINDDK\3790~1.183\lib\wxp\i386\BufferOverflowU.lib 
+1>C:\WINDDK\3790~1.183\lib\crt\i386\msvcrt.lib 
+1>C:\WINDDK\3790~1.183\lib\wxp\i386\ntdll.lib 
+1>C:\WINDDK\3790~1.183\lib\wxp\i386\hid.lib 
+1>C:\WINDDK\3790~1.183\lib\wxp\i386\setupapi.lib 
+1>C:\WINDDK\3790~1.183\lib\wxp\i386\Kernel32.lib 
+1>C:\WINDDK\3790~1.183\lib\wxp\i386\sehupd.lib 
+1>	echo Skip Binplace:
+1>Skip Binplace:
+1>
+1>Stop.
