@@ -18,7 +18,7 @@ CXXFLAGS = $(CFLAGS)
 LIBS = 
 else ifeq ($(OS), MACOSX)
 TARGET = $(PROG)
-SDK = /usr/local/SDKs/MacOSX.platform/MacOSX10.15.sdk
+SDK = /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
 ARCH = -mmacosx-version-min=10.15 -arch x86_64
 CC = g++
 STRIP = strip

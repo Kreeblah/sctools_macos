@@ -17,7 +17,7 @@ CFLAGS = -Wall -O2 -DOS_$(OS) -std=c99
 LIBS = -lusb
 else ifeq ($(OS), MACOSX)
 TARGET = $(PROG)
-SDK = /usr/local/SDKs/MacOSX.platform/MacOSX10.15.sdk
+SDK = /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
 ARCH = -mmacosx-version-min=10.15 -arch x86_64
 CC = gcc
 STRIP = strip
