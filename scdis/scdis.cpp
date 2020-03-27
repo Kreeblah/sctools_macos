@@ -342,7 +342,7 @@ int process_file(const uint8_t* buf, size_t buflen)
 
 int main(int argc, char** argv)
 {
-	printf("scdis v1.13\n");
+	printf("scdis v1.14\n");
 
 	if ( argc != 2 && argc != 3 ) {
 		fprintf(stderr, "usage: scdis <binary_config> [<text_config>]\n");

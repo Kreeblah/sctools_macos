@@ -109,7 +109,7 @@ int do_read(const char* fname)
 
 int main(int argc, char** argv)
 {
-	printf("scrd v1.13\n");
+	printf("scrd v1.14\n");
 
 	if ( argc != 2 ) {
 		fprintf(stderr, "usage: scrd <config_binary>\n");

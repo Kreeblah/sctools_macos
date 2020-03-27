@@ -5,19 +5,31 @@
 token_t meta_token_list[] =
 {
 	{ "LCTRL",               0x01 }, //  Left Control
+    { "MACOS_LCONTROL",      0x01 }, //  macOS Left Control
 	{ "LSHIFT",              0x02 }, //  Left Shift
+    { "MACOS_LSHIFT",        0x02 }, //  macOS Left Shift
 	{ "LALT",                0x04 }, //  Left Alt
+    { "MACOS_LOPTION",       0x04 }, //  macOS Left Alt/Option
 	{ "LGUI",                0x08 }, //  Left GUI
+    { "MACOS_LCOMMAND",      0x08 }, //  macOS Left Command
 
 	{ "RCTRL",               0x10 }, //  Right Control
+    { "MACOS_RCONTROL",      0x10 }, //  macOS Right Control
 	{ "RSHIFT",              0x20 }, //  Right Shift
+    { "MACOS_RSHIFT",        0x20 }, //  macOS Right Shift
 	{ "RALT",                0x40 }, //  Right Alt
+    { "MACOS_ROPTION",       0x40 }, //  macOS Right Alt/Option
 	{ "RGUI",                0x80 }, //  Right GUI
+    { "MACOS_RCOMMAND",      0x80 }, //  macOS Right Command
 
 	{ "CTRL",                0x11 }, //  Either/Both Control
+    { "MACOS_CONTROL",       0x11 }, //  Either/Both macOS Control
 	{ "SHIFT",               0x22 }, //  Either/Both Shift
+    { "MACOS_SHFIT",         0x22 }, //  Either/Both macOS Shift
 	{ "ALT",                 0x44 }, //  Either/Both Alt
+    { "MACOS_OPTION",        0x44 }, //  Either/Both macOS Alt/Option
 	{ "GUI",                 0x88 }, //  Either/Both GUI
+    { "MACOS_COMMAND",       0x88 }, //  Either/Both macOS Command
 
 	{ "ALL",                 0xFF }, //  Any/All
 };
@@ -93,6 +105,7 @@ token_t hid_token_list[] =
     { "F9",                      0x42 }, //  F9
     { "F10",                     0x43 }, //  F10
     { "F11",                     0x44 }, //  F11
+    { "MACOS_VIEW_DESKTOP",      0x44 }, //  macOS View Desktop
     { "F12",                     0x45 }, //  F12
     { "PRINTSCREEN",             0x46 }, //  Print Screen
     { "SCROLL_LOCK",             0x47 }, //  Scroll Lock
@@ -130,7 +143,9 @@ token_t hid_token_list[] =
     { "PAD_EQUALS",              0x67 }, //  Keypad =
     { "F13",                     0x68 }, //  F13
     { "F14",                     0x69 }, //  F14
+    { "MACOS_BRIGHTNESS_DOWN",   0x69 }, //  macOS Screen Brightness Down
     { "F15",                     0x6A }, //  F15
+    { "MACOS_BRIGHTNESS_UP",     0x6A }, //  macOS Screen Brightness Up
     { "F16",                     0x6B }, //  F16
     { "F17",                     0x6C }, //  F17
     { "F18",                     0x6D }, //  F18
@@ -152,8 +167,11 @@ token_t hid_token_list[] =
     { "PASTE",                   0x7D }, //  Keyboard Paste
     { "FIND",                    0x7E }, //  Keyboard Find
     { "MUTE",                    0x7F }, //  Keyboard Mute
+    { "MACOS_VOLUME_MUTE",       0x7F }, //  macOS Volume Mute
     { "VOLUME_UP",               0x80 }, //  Keyboard Volume Up
+    { "MACOS_VOLUME_UP",         0x80 }, //  macOS Volume Up
     { "VOLUME_DOWN",             0x81 }, //  Keyboard Volume Dn
+    { "MACOS_VOLUME_DOWN",       0x81 }, //  macOS Volume Down
     { "LOCKING_CAPS_LOCK",       0x82 }, //  Keyboard Locking Caps Lock
     { "LOCKING_NUM_LOCK",        0x83 }, //  Keyboard Locking Num Lock
     { "LOCKING_SCROLL_LOCK",     0x84 }, //  Keyboard Locking Scroll Lock
@@ -190,6 +208,7 @@ token_t hid_token_list[] =
     { "CRSEL_PROPS",             0xA3 }, //  Keyboard CrSel/Props
     { "EXSEL",                   0xA4 }, //  Keyboard ExSel
     { "SYSTEM_POWER",            0xA8 }, //  System Power
+    { "MACOS_POWER",             0xA8 }, //  macOS System Power
     { "SYSTEM_SLEEP",            0xA9 }, //  System Sleep
     { "SYSTEM_WAKE",             0xAA }, //  System Wake
 	{ "AUX1",                    0xAB }, //  Auxiliary key 1
@@ -252,17 +271,28 @@ token_t hid_token_list[] =
     { "SELECT_6",                0xDE }, //  Select 6
     { "SELECT_7",                0xDF }, //  Select 7
     { "LCTRL",                   0xE0 }, //  Left Control
+    { "MACOS_LCONTROL",          0xE0 }, //  macOS Left Control
     { "LSHIFT",                  0xE1 }, //  Left Shift
+    { "MACOS_LSHIFT",            0xE1 }, //  macOS Left Shift
     { "LALT",                    0xE2 }, //  Left Alt
+    { "MACOS_LOPTION",           0xE2 }, //  macOS Left Alt/Option
     { "LGUI",                    0xE3 }, //  Left GUI
+    { "MACOS_LCOMMAND",          0xE3 }, //  macOS Left Command
     { "RCTRL",                   0xE4 }, //  Right Control
+    { "MACOS_RCONTROL",          0xE4 }, //  macOS Right Control
     { "RSHIFT",                  0xE5 }, //  Right Shift
+    { "MACOS_RSHIFT",            0xE5 }, //  macOS Right Shift
     { "RALT",                    0xE6 }, //  Right Alt
+    { "MACOS_ROPTION",           0xE6 }, //  macOS Right Alt/Option
     { "RGUI",                    0xE7 }, //  Right GUI
+    { "MACOS_RCOMMAND",          0xE8 }, //  macOS Right Command
     { "MEDIA_NEXT_TRACK",        0xE8 }, //  Scan Next Track
+    { "MACOS_NEXT_TRACK",        0xE8 }, //  macOS Next Track
     { "MEDIA_PREV_TRACK",        0xE9 }, //  Scan Previous Track
+    { "MACOS_PREV_TRACK",        0xE9 }, //  macOS Previous Track
     { "MEDIA_STOP",              0xEA }, //  Stop
-    { "MEDIA_PLAY_PAUSE",        0xEB }, //  Play/ Pause
+    { "MEDIA_PLAY_PAUSE",        0xEB }, //  Play/Pause
+    { "MACOS_PLAY_PAUSE",        0xEB }, //  macOS Play/Pause
     { "MEDIA_MUTE",              0xEC }, //  Mute
     { "MEDIA_BASS_BOOST",        0xED }, //  Bass Boost
     { "MEDIA_LOUDNESS",          0xEE }, //  Loudness

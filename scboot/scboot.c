@@ -42,7 +42,7 @@ int do_boot()
 
 int main(int argc, char** argv)
 {
-	printf("scboot v1.13\n");
+	printf("scboot v1.14\n");
 
 	if ( argc != 1 ) {
 		fprintf(stderr, "usage: scboot\n");
