@@ -884,7 +884,7 @@ int write_target(const char* fname)
 
 int main(int argc, char** argv)
 {
-	printf("scas v1.10\n");
+	printf("scas v1.13\n");
 
 	int err = 0;
 	if ( argc < 3 ) {

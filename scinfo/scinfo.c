@@ -87,7 +87,7 @@ int do_info()
 
 int main(int argc, char** argv)
 {
-	printf("scinfo v1.10\n");
+	printf("scinfo v1.13\n");
 
 	if ( argc != 1 ) {
 		fprintf(stderr, "usage: scinfo\n");

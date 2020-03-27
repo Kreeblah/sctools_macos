@@ -255,7 +255,7 @@ int do_write(const char* fname)
 
 int main(int argc, char** argv)
 {
-	printf("scwr v1.10\n");
+	printf("scwr v1.13\n");
 
 	if ( argc != 2 ) {
 		fprintf(stderr, "usage: scwr <config_binary>\n");
