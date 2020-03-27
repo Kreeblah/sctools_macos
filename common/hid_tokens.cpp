@@ -5,31 +5,31 @@
 token_t meta_token_list[] =
 {
 	{ "LCTRL",               0x01 }, //  Left Control
-    { "MACOS_LCONTROL",      0x01 }, //  macOS Left Control
+	{ "MACOS_LCONTROL",      0x01 }, //  macOS Left Control
 	{ "LSHIFT",              0x02 }, //  Left Shift
-    { "MACOS_LSHIFT",        0x02 }, //  macOS Left Shift
+	{ "MACOS_LSHIFT",        0x02 }, //  macOS Left Shift
 	{ "LALT",                0x04 }, //  Left Alt
-    { "MACOS_LOPTION",       0x04 }, //  macOS Left Alt/Option
+	{ "MACOS_LOPTION",       0x04 }, //  macOS Left Alt/Option
 	{ "LGUI",                0x08 }, //  Left GUI
-    { "MACOS_LCOMMAND",      0x08 }, //  macOS Left Command
+	{ "MACOS_LCOMMAND",      0x08 }, //  macOS Left Command
 
 	{ "RCTRL",               0x10 }, //  Right Control
-    { "MACOS_RCONTROL",      0x10 }, //  macOS Right Control
+	{ "MACOS_RCONTROL",      0x10 }, //  macOS Right Control
 	{ "RSHIFT",              0x20 }, //  Right Shift
-    { "MACOS_RSHIFT",        0x20 }, //  macOS Right Shift
+	{ "MACOS_RSHIFT",        0x20 }, //  macOS Right Shift
 	{ "RALT",                0x40 }, //  Right Alt
-    { "MACOS_ROPTION",       0x40 }, //  macOS Right Alt/Option
+	{ "MACOS_ROPTION",       0x40 }, //  macOS Right Alt/Option
 	{ "RGUI",                0x80 }, //  Right GUI
-    { "MACOS_RCOMMAND",      0x80 }, //  macOS Right Command
+	{ "MACOS_RCOMMAND",      0x80 }, //  macOS Right Command
 
 	{ "CTRL",                0x11 }, //  Either/Both Control
-    { "MACOS_CONTROL",       0x11 }, //  Either/Both macOS Control
+	{ "MACOS_CONTROL",       0x11 }, //  Either/Both macOS Control
 	{ "SHIFT",               0x22 }, //  Either/Both Shift
-    { "MACOS_SHFIT",         0x22 }, //  Either/Both macOS Shift
+	{ "MACOS_SHFIT",         0x22 }, //  Either/Both macOS Shift
 	{ "ALT",                 0x44 }, //  Either/Both Alt
-    { "MACOS_OPTION",        0x44 }, //  Either/Both macOS Alt/Option
+	{ "MACOS_OPTION",        0x44 }, //  Either/Both macOS Alt/Option
 	{ "GUI",                 0x88 }, //  Either/Both GUI
-    { "MACOS_COMMAND",       0x88 }, //  Either/Both macOS Command
+	{ "MACOS_COMMAND",       0x88 }, //  Either/Both macOS Command
 
 	{ "ALL",                 0xFF }, //  Any/All
 };
