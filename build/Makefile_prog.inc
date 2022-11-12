@@ -17,14 +17,17 @@ CFLAGS = -Wall -O2 -DOS_$(OS)
 CXXFLAGS = $(CFLAGS)
 LIBS = 
 else ifeq ($(OS), MACOSX)
+ifndef ARCH
+$(error ARCH is not set.  Pass -DARCH=x86_64 or ARCH=arm64 to the make command.)
+endif
 TARGET = $(PROG)
-SDK = /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
-ARCH = -mmacosx-version-min=10.15 -arch x86_64
+SDK = /Library/Developer/CommandLineTools/SDKs/MacOSX11.sdk
+MIN_OS = -mmacosx-version-min=11
 CC = g++
 STRIP = strip
-CFLAGS = -Wall -O2 -DOS_$(OS) -isysroot $(SDK) $(ARCH)
+CFLAGS = -Wall -O2 -DOS_$(OS) -isysroot $(SDK) $(MIN_OS) -arch $(ARCH)
 CXXFLAGS = $(CFLAGS)
-LIBS = $(ARCH) -Wl,-syslibroot,$(SDK) -framework IOKit -framework CoreFoundation
+LIBS = $(MIN_OS) -arch $(ARCH) -Wl,-syslibroot,$(SDK) -framework IOKit -framework CoreFoundation
 else ifeq ($(OS), WINDOWS)
 TARGET = $(PROG).exe
 CC = i586-mingw32msvc-g++
