@@ -18,16 +18,23 @@ CXXFLAGS = $(CFLAGS)
 LIBS = 
 else ifeq ($(OS), MACOSX)
 ifndef ARCH
-$(error ARCH is not set.  Pass -DARCH=x86_64 or ARCH=arm64 to the make command.)
+$(error ARCH is not set.  Pass ARCH=x86_64 or ARCH=arm64 to the make command.)
+exit 1
 endif
 TARGET = $(PROG)
-SDK = /Library/Developer/CommandLineTools/SDKs/MacOSX11.sdk
-MIN_OS = -mmacosx-version-min=11
-CC = g++
+CC = clang++
 STRIP = strip
-CFLAGS = -Wall -O2 -DOS_$(OS) -isysroot $(SDK) $(MIN_OS) -arch $(ARCH)
+ifdef MACOS_SDK
+MACOS_SDK_PATH = $(MACOS_SDK)
+else
+MACOS_SDK_PATH = /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+endif
+ifdef MIN_MACOS_VER
+MIN_MACOS_OPTION = -mmacosx-version-min=$(MIN_MACOS_VER)
+endif
+CFLAGS = -Wall -O2 -DOS_$(OS) -isysroot $(MACOS_SDK_PATH) $(MIN_MACOS_OPTION) -arch $(ARCH)
 CXXFLAGS = $(CFLAGS)
-LIBS = $(MIN_OS) -arch $(ARCH) -Wl,-syslibroot,$(SDK) -framework IOKit -framework CoreFoundation
+LIBS = $(MIN_MACOS_OPTION) -arch $(ARCH) -Wl,-syslibroot,$(MACOS_SDK_PATH) -framework IOKit -framework CoreFoundation
 else ifeq ($(OS), WINDOWS)
 TARGET = $(PROG).exe
 CC = i586-mingw32msvc-g++
@@ -43,5 +50,3 @@ endif
 #OBJS = $(OBJS)
 
 include ../build/Makefile_rules.inc
-
-
